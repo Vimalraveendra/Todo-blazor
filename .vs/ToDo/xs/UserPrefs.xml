@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{85F67789-2D1F-4972-AC0B-BADB0B209AF3}|Default">
+  <MonoDevelop.Ide.ItemProperties.ToDo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDo/Pages/_Host.cshtml">
+    <Files>
+      <File FileName="ToDo/Pages/Index.razor" Line="10" Column="1" />
+      <File FileName="ToDo/wwwroot/Style.css" Line="7" Column="23" />
+      <File FileName="ToDo/Pages/_Host.cshtml" Line="16" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToDo" expanded="True">
+            <Node name="ToDo" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="_Host.cshtml" selected="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
