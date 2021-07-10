@@ -83,6 +83,22 @@ using ToDo.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 27 "/Users/vimalraveendran/Desktop/blazor/ToDo/ToDo/Pages/Index.razor"
+ 
+    public string todoInput { get; set; }
+    public List<string> todos = new List<string>();
+
+    public void AddTodo()
+    {
+        todos.Add(todoInput);
+        todoInput = "";
+
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -1,12 +1,37 @@
 ﻿@page "/"
 
-    <div class="main-container">
-        <h1>Todo App</h1>
+<div class="main-container">
+    <h1>Todo App</h1>
 
-        <div class="todo-container">
-            <input type="text" />
-            <button>Add</button>
-        </div>
-
+    <div class="todo-container">
+        <input type="text" @bind="todoInput" />
+        <button @onclick="AddTodo">Add</button>
     </div>
 
+
+
+        <ul class="list">
+            @foreach (var todo in todos)
+            {
+            <li>
+                <span>&times;</span>
+                @todo
+            </li>
+            
+            }
+        </ul>
+    </div>
+
+
+@code
+{
+    public string todoInput { get; set; }
+    public List<string> todos = new List<string>();
+
+    public void AddTodo()
+    {
+        todos.Add(todoInput);
+        todoInput = "";
+
+    }
+}
