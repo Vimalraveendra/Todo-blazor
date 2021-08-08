@@ -84,16 +84,33 @@ using ToDo.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "/Users/vimalraveendran/Desktop/blazor/ToDo/ToDo/Pages/Index.razor"
+#line 29 "/Users/vimalraveendran/Desktop/blazor/ToDo/ToDo/Pages/Index.razor"
  
     public string todoInput { get; set; }
-    public List<string> todos = new List<string>();
+    public int id { get; set; } =1;
+    public List<Items> todos = new List<Items>();
+
+    public class Items
+    {
+        public string Body;
+        public int listId;
+    }
 
     public void AddTodo()
     {
-        todos.Add(todoInput);
-        todoInput = "";
+        if (todoInput.Length>0)
+        {
+            todos.Add(new Items() { Body = todoInput, listId = id });
+            id++;
+            todoInput = "";
+        }
+        
 
+
+    }
+    public void HandleDelete(int listId)
+    {
+        todos.Remove(todos.Where(Item => Item.listId == listId).First());
     }
 
 #line default

@@ -6,7 +6,7 @@
 h1{
     text-align:center;
 }
-.todo-container {
+.todo-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +15,19 @@ h1{
 .list {
     padding: 0;
     margin: 0;
-    display: flex;
+  
     position: absolute;
     width: 250px;
     left: 50%;
-    justify-content: space-between;
+
     list-style: none;
     margin-top: 10px;
 }
+    .list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #cbc7c78a;
+        padding: 0px 5px;
+        margin-bottom: 3px;
+    }

@@ -1,5 +1,6 @@
 ﻿@page "/"
 
+
 <div class="main-container">
     <h1>Todo App</h1>
 
@@ -14,8 +15,9 @@
             @foreach (var todo in todos)
             {
             <li>
-                <span>&times;</span>
-                @todo
+
+                @todo.Body
+                <span id="@todo.listId" @onclick="@(e=>HandleDelete(todo.listId))">&times;</span>
             </li>
             
             }
@@ -26,12 +28,29 @@
 @code
 {
     public string todoInput { get; set; }
-    public List<string> todos = new List<string>();
+    public int id { get; set; } =1;
+    public List<Items> todos = new List<Items>();
+
+    public class Items
+    {
+        public string Body;
+        public int listId;
+    }
 
     public void AddTodo()
     {
-        todos.Add(todoInput);
-        todoInput = "";
+        if (todoInput.Length>0)
+        {
+            todos.Add(new Items() { Body = todoInput, listId = id });
+            id++;
+            todoInput = "";
+        }
+        
 
+
+    }
+    public void HandleDelete(int listId)
+    {
+        todos.Remove(todos.Where(Item => Item.listId == listId).First());
     }
 }
